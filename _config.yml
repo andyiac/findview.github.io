@@ -17,5 +17,5 @@ IMG_PATH: http://freshstu.qiniudn.com
 
 baseurl: ""
 # url: "http://www.andyiac.com"
-url: "http://localhost:4000"
+url: "http://blog.andyiac.com"
 permalink: /:year/:month/:title/
