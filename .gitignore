@@ -1,0 +1,7 @@
+.*.swp
+.*.swo
+_site
+*.notes
+_site/*
+_post/*
+.DS_Store

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="content markdown">
+	<div class="about">
+	    {{ content }}
+	</div>
+</div>
+<div class="comments">
+    {% if page.comments %}
+    {% include comment.html %}
+    {% endif %}
+</div>
