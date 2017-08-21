@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "我心目中的GitHot"
+title: "一个小应用 GitHot"
 date: "2015-10-10 20:30"
 ---
 

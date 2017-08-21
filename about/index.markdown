@@ -1,16 +1,20 @@
 ---
 layout: page
-title: About Gereksiz
+title: About Andyiac
 ---
 
-Gereksiz is a minimalist Jekyll theme, based on the default Jekyll theme. It is responsive, generates JSON and Atom feeds on each build, and can be easily extended. It uses Open Sans from Google Fonts.
 
-> It supports blockquotes, too.
+The only way to know how strong you are, is keep testing your limits !
+Android开发者，创业，爱生活，爱技术，爱开源。
 
-## Gereksiz on the Internet
+## 联系我
 
-* [Gereksiz][github] on GitHub
-* [Bugs of Berk][bob], theme creator's website
+Github: andyiac
+Weibo: andyiac
+知乎: andyiac
+微信：andyiac
+Email: andyiaczhang#gmail.com
 
-[github]: https://github.com/berkoz/gereksiz/
-[bob]: http://bugsofberk.net
+## 订阅本站
+http://blog.andyiac.com/feed 
+

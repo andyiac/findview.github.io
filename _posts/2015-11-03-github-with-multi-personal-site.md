@@ -9,7 +9,7 @@ GitHub可以免费托管静态网页，并且为每个账户提供一个username
 另外GitHub中的repository 也可以建立gh-pages分支，GitHub会默认发布此分支的静态网页在`http://username.github.io/projectname` 下，据此我们可以发布N个站了。
 
 
-## 快速安装
+## 快速安装 jekyll
 
 
 首先请确认有ruby环境，如何安装ruby就不在此赘述了
@@ -45,25 +45,6 @@ $ gem install liquid
 ```
 ~ $ gem install pygments.rb      
 ```
-
-## 添加TAB导航页面
-
-在根目录下添加同 about.md 相仿的md文件如 timeline.md
-
-Front Matter 应该写成：
-
-```
----
-layout: page
-title: Blogging like a hacker
----
-```
-
-    
-注意 `layout: page` 其中 page 的样式可以在 `_layout`文件下找到。
- 
-注：`index.html` 也可以使用 `index.md` 同样适用，注意写 Front Matter
-
 
 
 ## 使用GitHub托管多个网站
@@ -120,29 +101,6 @@ title: Blogging like a hacker
 - [www.androiddevlibs.com](http://www.androiddevlibs.com)
 - [www.androidopensourceproject.com](http://www.androidopensourceproject.com)
 
-
-## 添加右侧内容导航
-
-文章正文的内容根据markdown的级别二级标题和三级标题自动生成导航内容（貌似可以使用js实现 我一直想给markdown添加的功能。
-具体如下： 
-
-- 一级标题即：一个 `#` 不用 一级标题用来题目用即每个文章的topic
-- 二级标题和三级标题才有 导航
-- 三级标题默认不展开，只有当文章滑动到相应标题才展开
-- 导航放在右手边，方便用户点击
-- 放在左边可能更符合视觉效果，个人认为是还是放在右边更符合简洁设计的思路
-- [www.siberiawolf.com](http://siberiawolf.com/) 这个是通过遍历文件来实现的
-
-笔者对[www.siberiawolf.com](http://siberiawolf.com/)做了修改有了下面这两个网站
-
-- [www.androiddevlibs.com](http://www.androiddevlibs.com)
-- [www.androidopensourceproject.com](http://www.androidopensourceproject.com)
-
-
-### SASS
- 可以理解为CSS的升级版
-
-## Links
 
 ### 一些简洁的主题
 
