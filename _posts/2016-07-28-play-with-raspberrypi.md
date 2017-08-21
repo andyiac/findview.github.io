@@ -133,9 +133,7 @@ $ node index.js
 ```
 Hi andyiac: 
 
-
 your raspberry pi's ip address is 192.168.1.42 
-
 
 your raspberry PI
 ```
