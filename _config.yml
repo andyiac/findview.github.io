@@ -1,21 +1,11 @@
-# Site settings
-name: andyiac
-title: andyiac
-nickname: andyiac
-description: andyiac's blog
-author: andyiac
-twitter_username: andyiac
-github_username: andyiac
-
-# Build settings
-highlighter: pygments
+name: "Andyiac"
 markdown: redcarpet
-redcarpet:
-  extensions: ["smart", "tables", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+highlighter: pygments
+permalink: :title
+exclude: [README.md, LICENSE, Makefile]
+baseurl: ''
 
-IMG_PATH: http://freshstu.qiniudn.com
-
-baseurl: ""
-# url: "http://www.andyiac.com"
-url: "http://blog.andyiac.com"
-permalink: /:year/:month/:title/
+# Information for the Atom feed
+andyiac:
+   author: "andyiac"
+   email: "andyiac@xxx.com"
