@@ -1,6 +1,6 @@
 name: "Andyiac"
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown # redcarpet
+highlighter: rouge # pygments
 permalink: :title
 exclude: [README.md, LICENSE, Makefile]
 baseurl: ''
@@ -8,4 +8,4 @@ baseurl: ''
 # Information for the Atom feed
 andyiac:
    author: "andyiac"
-   email: "andyiac@xxx.com"
+   email: "andyiaczhang@gmail.com"

@@ -3,18 +3,20 @@ layout: default
 title: andyiac's blog
 ---
 
+
 <div id="home">
-   
-   <h1 class="title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-
-   <!-- <p class="intro">You've reached the webpage for the Jekyll theme <a href="https://github.com/berkoz/gereksiz">Gereksiz.</a> This is a blog. <a href="{{ site.baseurl }}/atom.xml">Atom feed.</a></p> -->
-
-   <!-- <p> <a href="{{ site.baseurl }}/about/">About</a> <a href="{{ site.baseurl }}/atom.xml">Feed</a>   </p> -->
-
-
+   <h1>Home</h1>
    <ul class="posts">
       {% for post in site.posts %}
-      <li><span>&gt; {{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+            <a class="post-item" href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+                <div class="post-content-preview">
+                    {{ post.content | strip_html | truncate:80 }}
+                </div>
+                <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            </a>
+      </li>
       {% endfor %}
    </ul>
 </div>

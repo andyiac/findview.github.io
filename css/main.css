@@ -24,7 +24,10 @@ body {
 }
 
 /* Gentle links */
-a { color: #3498DB; text-decoration: none; }
+/* a { color: #3498DB; text-decoration: none; } */
+a { color: #03a9f4; text-decoration: none; }
+
+
 a:hover { color: #2980B9; }
 
 /* The blog posts archive, a long list */
@@ -175,8 +178,47 @@ footer #date {
    text-overflow: ellipsis;
    white-space: nowrap;
 }
+/* main header */
+/* #out-side-header {
+    border: 1px solid #ccc;
+    width: 18em;
+    float: left;
+    vertical-align: top;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+}
+
+#home {
+    border: 1px solid #ccc;
+     max-width: 42em;
+     float:left;
+} */
 
 /* Remove the huge gap at the first paragraph */
 #home p.intro {
    margin-top: 0px;
+}
+
+/* nav menu */
+.nav-menu {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.nav-item {
+    padding-right: 10px;
+}
+
+/* blog post list  */
+.post-item {
+    font-size: 16px;
+}
+.post-content-preview {
+    color: #A3A3A3;
+    white-space:normal;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 2;
 }

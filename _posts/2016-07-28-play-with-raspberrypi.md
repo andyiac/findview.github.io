@@ -9,13 +9,14 @@ date: "2016-07-28 16:59:30"
 - raspberrypi B (一代)
 - 360无线wifi
 
-### 问题一，没有外接显示器，每次如何动态获得 IP 地址
+### 问题，没有外接显示器，每次如何动态获得 IP 地址
 
-### 思路 
+### 思路
 
 每次开机后自动运行一个脚本，查询本机的 IP ，然后使用邮件的方式，将本机的 IP 发送到指定的邮箱。
 
 找了一圈的 Linux 下发送邮件的功能，最终锁定使用 NodeJs 写的 mailsendler ，
+
 
 
 #### 第一步 nodejs 获取本机 IP 方法:  
@@ -29,22 +30,22 @@ for (var dev in ifaces) {
 ```
 
 
-### 使用 node 发送邮件 
+### 使用 node 发送邮件
 
 步骤如下:
 
-```
+```shell
 $ mkdir sendPiIp
 $ cd sendPiIp
 $ npm init .
 $ npm install -save nodemailer
-$ touch index.js	
+$ touch index.js
 ```
 
 index.js 的代码如下:
 
-```
-/* eslint no-console: 0 */
+```JavaScript
+
 var nodemailer = require('nodemailer');
 
 var address,
@@ -55,19 +56,10 @@ for (var dev in ifaces) {
 
 var raspberryIP = address;
 
-// get local ip first 
-
-// require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-
-//   console.log('addr: '+add);
-//   raspberryIP = add;
-// })
-
-
 // Create a SMTP transporter object
 var transporter = nodemailer.createTransport({
-    
-         host: 'smtp.163.com',
+
+    host: 'smtp.163.com',
     port: 465,
     secure: true, // use SSL
     pool: true,
@@ -80,13 +72,8 @@ var transporter = nodemailer.createTransport({
     debug: true // include SMTP traffic in the logs
 }, {
     // default message fields
-
     // sender info
     from: 'andyiac raspberry pi <andyiac@163.com>',
-    
-    //headers: {
-    //    'X-Laziness-level': 1000 // just an example header, no need to use this
-    //}
 });
 
 
@@ -98,21 +85,18 @@ var messages = [{
     to: '"touser@xxxmail.com" <touser@xxxmail.com>',
     subject: 'Hi andyiac\'s raspberry ip is comming ', //
     text: 'raspberry pi ip',
-    html: '<p>Hi andyiac: <br><br><br> your raspberry pi\'s ip address is <b> '+ raspberryIP +'</b> <br><br><br><br> your raspberry PI </p>'
+    html: '<p>Hi andyiac: <br><br><br> your raspberry pi\'s ip address is <b> '+ raspberryIP +'</b>  your raspberry PI </p>'
 }];
 
 // send mail only if there are free connection slots available
 transporter.on('idle', function () {
     // if transporter is idling, then fetch next message from the queue and send it
     while (transporter.isIdle() && messages.length) {
-        console.log('Sending Mail');
         transporter.sendMail(messages.shift(), function (error, info) {
             if (error) {
-                console.log('Error occurred');
                 console.log(error.message);
                 return;
             }
-            console.log('Message sent successfully!');
             console.log('Server responded with "%s"', info.response);
         });
     }
@@ -131,9 +115,9 @@ $ node index.js
 看了下邮箱成功接收到邮件, 如下：
 
 ```
-Hi andyiac: 
+Hi andyiac:
 
-your raspberry pi's ip address is 192.168.1.42 
+your raspberry pi's ip address is 192.168.1.42
 
 your raspberry PI
 ```
@@ -143,16 +127,16 @@ your raspberry PI
 
 修改权限为可执行，复制到/etc/init.d，注册为开机启动
 
-```
-$ touch myIp.sh
-$ chmod 755 myIp.sh、
-$ sudo cp myIp.sh /etc/init.d
-$ sudo update-rc.d myIp.sh defaults
+```shell
+touch myIp.sh
+chmod 755 myIp.sh、
+sudo cp myIp.sh /etc/init.d
+sudo update-rc.d myIp.sh defaults
 ```
 
 myIp.sh 脚本内容如下:
 
-```
+```shell
 #!/bin/bash
 
 NODE=/home/pi/.nvm/versions/node/v6.3.1/bin/node
@@ -186,6 +170,3 @@ exit 0
 记得升级一下 node 版本 我用的是 v6.3.1
 
 打完收工，快去重启一下 PI 试一下吧
-
-
-
