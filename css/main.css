@@ -41,6 +41,7 @@ a:hover { color: #2980B9; }
    text-overflow: ellipsis;
    white-space: nowrap;
    line-height: 2em;
+   margin-bottom: 1.5em;
 }
 
 .posts span {
@@ -55,16 +56,57 @@ a:hover { color: #2980B9; }
    .posts li span { display: none; }
 }
 
+
 main {
    font-size: 115%;
    text-align: left;
    margin: 4em auto 0.5em;
    line-height: 1.5em;
-   max-width: 42em;
+   max-width: 60em;
    padding-left: 18px;
    padding-right: 18px;
    line-height: 2;
+
 }
+
+#out-side-header {
+    padding: 2em 0;
+    max-width: 12em;
+    margin-right: 2em;
+    position: fixed;
+    float: left;
+}
+
+#home, article{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 42em;
+    float:right;
+    padding: 0 2em;
+    min-height: 30em;
+    background: #fff;
+    margin-bottom: 4em;
+}
+@media only screen and (max-width: 960px) {
+  #out-side-header {
+      padding: 0;
+      float: none;
+      position: inherit;
+      max-width: 42em;
+      margin-right: 0;
+  }
+  #home, article{
+      border-radius: 8px;
+      max-width: 42em;
+      float: none;
+      padding: 0;
+      border: none;
+      min-height: 30em;
+      margin-bottom: 4em;
+      background-color: #ecf0f1;
+  }
+}
+
 
 header a {
    font-weight: bold;
@@ -164,37 +206,6 @@ article img {
    page-break-inside: avoid;
 }
 
-footer {
-   height: 2.5em;
-}
-
-footer #date {
-   float: right;
-}
-
-footer #return,
-footer #date {
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-}
-/* main header */
-/* #out-side-header {
-    border: 1px solid #ccc;
-    width: 18em;
-    float: left;
-    vertical-align: top;
-    position: absolute;
-    top: 2em;
-    left: 2em;
-}
-
-#home {
-    border: 1px solid #ccc;
-     max-width: 42em;
-     float:left;
-} */
-
 /* Remove the huge gap at the first paragraph */
 #home p.intro {
    margin-top: 0px;
@@ -204,7 +215,8 @@ footer #date {
 .nav-menu {
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    margin: 0;
 }
 .nav-item {
     padding-right: 10px;
@@ -221,4 +233,16 @@ footer #date {
     text-overflow: ellipsis;
     font-size: 14px;
     line-height: 2;
+}
+.post-content-preview:hover {
+    color: #999;
+}
+
+
+/* single-page */
+.single-page {
+  border: none;
+  max-width: 42em;
+  margin: 4em auto;
+  float:none;
 }

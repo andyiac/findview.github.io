@@ -11,18 +11,17 @@ title: 张宁的简历
 
 - 手机：170-9011-2017
 - Email：[andyiaczhang@gmail.com](mailto:andyiaczhang@gmail.com)
-- 微信号：andyiac
 
 ---
 
 ### 个人信息
 
 - 张宁/男/1990
-- 本科/河北北方学院/信息工程
+- 本科/河北北方学院/信息工程/2010-2014
 - 工作年限：四年
 - 技术博客：[http://blog.andyiac.com](http://blog.andyiac.com)
 - GitHub: [http://github.com/andyiac](http://github.com/andyiac)
-- 期望职位：Android工程师，应用架构师
+- 期望职位：Android 高级工程师，应用架构师
 - 期望薪资：面议
 - 期望城市：北京
 - 四年Android开发经验，专长于网络客户端的设计开发，熟悉常用框架和设计。  
